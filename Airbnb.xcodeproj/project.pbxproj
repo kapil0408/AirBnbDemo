@@ -16,6 +16,7 @@
 		82DC73F42B5C3544007A5082 /* AirbnbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC73F32B5C3544007A5082 /* AirbnbUITestsLaunchTests.swift */; };
 		82DC740D2B5C36E1007A5082 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC740C2B5C36E1007A5082 /* ExploreView.swift */; };
 		82DC740F2B5C3858007A5082 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC740E2B5C3858007A5082 /* ListingItemView.swift */; };
+		82DC74112B5C4378007A5082 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC74102B5C4378007A5082 /* SearchAndFilterBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		82DC73F32B5C3544007A5082 /* AirbnbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82DC740C2B5C36E1007A5082 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		82DC740E2B5C3858007A5082 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
+		82DC74102B5C4378007A5082 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				82DC740C2B5C36E1007A5082 /* ExploreView.swift */,
+				82DC74102B5C4378007A5082 /* SearchAndFilterBar.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				82DC73D92B5C3541007A5082 /* ContentView.swift in Sources */,
 				82DC740F2B5C3858007A5082 /* ListingItemView.swift in Sources */,
 				82DC740D2B5C36E1007A5082 /* ExploreView.swift in Sources */,
+				82DC74112B5C4378007A5082 /* SearchAndFilterBar.swift in Sources */,
 				82DC73D72B5C3541007A5082 /* AirbnbApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
