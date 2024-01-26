@@ -94,7 +94,51 @@ struct ListingDetailView: View {
             }
             .padding()
             
+            Divider()
             
+            // Bedroom View
+            VStack(alignment: .leading, spacing: 16) {
+                Text("Where You'll sleep")
+                    .font(.headline)
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 16) {
+                        ForEach(1..<5) { bedroom in
+                            VStack{
+                                Image(systemName: "bed.double")
+                                Text("Bedroom \(bedroom)")
+                            }
+                            .frame(width: 132, height: 100)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(lineWidth: 1)
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                    }
+                }
+            }
+            .padding()
+            
+            Divider()
+            
+            
+            // listing amenties
+            VStack(alignment: .leading, spacing: 16){
+                Text("What this place offers")
+                    .font(.headline)
+                
+                ForEach(0..<5) { feature in
+                    HStack{
+                        Image(systemName: "wifi")
+                            .frame(width: 32)
+                        Text("Wifi")
+                            .font(.footnote)
+                        
+                        Spacer()
+                    }
+                }
+            }.padding()
         }
     }
 }
