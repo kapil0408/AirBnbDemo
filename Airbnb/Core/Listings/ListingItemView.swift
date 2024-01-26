@@ -9,28 +9,14 @@ import SwiftUI
 
 struct ListingItemView: View {
     
-    var images = [
-    
-        "arkit",
-        "classkit",
-        "carplay",
-        "swiftui",
-
-    ]
+   
     
     var body: some View {
         VStack(spacing: 8) {
             //Images
-            TabView{
-                ForEach(images, id: \.self) { image in
-                    Image(image)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
-            .frame(height: 320)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .tabViewStyle(.page)
+           ListingImageCarouselView()
+                .frame(height: 320)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             // listing details
             HStack(alignment: .top) {
@@ -38,6 +24,7 @@ struct ListingItemView: View {
                 VStack(alignment: .leading){
                     Text("Miami, Florida")
                         .fontWeight(.semibold)
+                        .foregroundColor(.black)
                     Text("12 mi away")
                         .foregroundColor(.gray)
                     Text("Nov 3 - 10")
@@ -47,13 +34,14 @@ struct ListingItemView: View {
                             .fontWeight(.semibold)
                         Text("night")
                     }
+                    .foregroundColor(.black)
                 }
                 Spacer()
                 //rating
                 HStack(spacing: 2) {
                     Image(systemName: "star.fill")
                     Text("4.86")
-                }
+                }.foregroundColor(.black)
                 
             }.font(.footnote)
         }
