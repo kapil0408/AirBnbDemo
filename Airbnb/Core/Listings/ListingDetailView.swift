@@ -6,17 +6,28 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ListingDetailView: View {
     
     var images = [
-    
         "arkit",
         "classkit",
         "carplay",
         "swiftui",
-
     ]
+    
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(
+            latitude: 25.7617,
+            longitude: 80.1918
+        ),
+        span: MKCoordinateSpan(
+            latitudeDelta: 10,
+            longitudeDelta: 10
+        )
+    )
+    
     var body: some View {
         ScrollView{
             ListingImageCarouselView()
@@ -43,9 +54,8 @@ struct ListingDetailView: View {
             }
             .padding(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
-            
             Divider()
-
+            
             //Host Info View
             HStack{
                 VStack(alignment: .leading, spacing: 4){
@@ -71,7 +81,6 @@ struct ListingDetailView: View {
                     .clipShape(Circle())
             }
             .padding()
-            
             Divider()
             
             //listing features
@@ -93,34 +102,32 @@ struct ListingDetailView: View {
                 }
             }
             .padding()
-            
             Divider()
             
             // Bedroom View
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Where You'll sleep")
-                    .font(.headline)
-                
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack(spacing: 16) {
-                        ForEach(1..<5) { bedroom in
-                            VStack{
-                                Image(systemName: "bed.double")
-                                Text("Bedroom \(bedroom)")
-                            }
-                            .frame(width: 132, height: 100)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(lineWidth: 1)
-                                    .foregroundColor(.gray)
-                            }
-                        }
-                    }
-                }
-            }
-            .padding()
-            
-            Divider()
+            //            VStack(alignment: .leading, spacing: 16) {
+            //                Text("Where You'll sleep")
+            //                    .font(.headline)
+            //
+            //                ScrollView(.horizontal, showsIndicators: false){
+            //                    HStack(spacing: 16) {
+            //                        ForEach(1..<5) { bedroom in
+            //                            VStack{
+            //                                Image(systemName: "bed.double")
+            //                                Text("Bedroom \(bedroom)")
+            //                            }
+            //                            .frame(width: 132, height: 100)
+            //                            .overlay {
+            //                                RoundedRectangle(cornerRadius: 12)
+            //                                    .stroke(lineWidth: 1)
+            //                                    .foregroundColor(.gray)
+            //                            }
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //            .padding()
+            //            Divider()
             
             
             // listing amenties
@@ -138,7 +145,45 @@ struct ListingDetailView: View {
                         Spacer()
                     }
                 }
+            }
+            .padding()
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 16){
+                Text("Where you'll be")
+                    .font(.headline)
+                
+                Map(coordinateRegion: $region)
+                    .frame(height:200)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
             }.padding()
+            
+        }.overlay(alignment: .bottom) {
+            VStack{
+                Divider()
+                    .padding(.bottom)
+                HStack {
+                    VStack{
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Button{
+                        
+                    } label: {
+                        Text("Reserve")
+                            .foregroundStyle(.white)
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .frame(width: 140, height: 40)
+                            .background(.pink)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                }
+                .padding(.horizontal, 32)
+            }
+            .background(.white)
         }
     }
 }
