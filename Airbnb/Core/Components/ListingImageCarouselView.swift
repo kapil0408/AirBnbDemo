@@ -11,10 +11,10 @@ struct ListingImageCarouselView: View {
     
     var images = [
     
-        "arkit",
-        "classkit",
-        "carplay",
-        "swiftui",
+        "listing1",
+        "listing2",
+        "listing3",
+        "listing4",
     ]
     
     var body: some View {

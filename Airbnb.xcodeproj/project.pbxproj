@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82CA50A22B655D9D000B9DD8 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA50A12B655D9D000B9DD8 /* DestinationSearchView.swift */; };
 		82DC73D72B5C3541007A5082 /* AirbnbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC73D62B5C3541007A5082 /* AirbnbApp.swift */; };
 		82DC73D92B5C3541007A5082 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC73D82B5C3541007A5082 /* ContentView.swift */; };
 		82DC73DB2B5C3543007A5082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82DC73DA2B5C3543007A5082 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82CA50A12B655D9D000B9DD8 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 		82DC73D32B5C3541007A5082 /* Airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DC73D62B5C3541007A5082 /* AirbnbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbApp.swift; sourceTree = "<group>"; };
 		82DC73D82B5C3541007A5082 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				82DC740C2B5C36E1007A5082 /* ExploreView.swift */,
 				82DC74102B5C4378007A5082 /* SearchAndFilterBar.swift */,
+				82CA50A12B655D9D000B9DD8 /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82DC74162B5D3A9A007A5082 /* ListingImageCarouselView.swift in Sources */,
+				82CA50A22B655D9D000B9DD8 /* DestinationSearchView.swift in Sources */,
 				82DC73D92B5C3541007A5082 /* ContentView.swift in Sources */,
 				82DC740F2B5C3858007A5082 /* ListingItemView.swift in Sources */,
 				82DC740D2B5C36E1007A5082 /* ExploreView.swift in Sources */,
