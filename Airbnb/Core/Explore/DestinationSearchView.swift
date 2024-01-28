@@ -20,18 +20,36 @@ struct DestinationSearchView: View {
     @State private var destination = ""
     
     @State private var selectedOption: DestinationSearchOptions = .location
+    @State private var startDate = Date()
+    @State private var endDate = Date()
+    @State private var numGuests = 0
     
     var body: some View {
         VStack{
-            Button {
-                withAnimation(.easeIn){
-                    show.toggle()
+            HStack{
+                
+                Button {
+                    withAnimation(.easeIn){
+                        show.toggle()
+                    }
+                } label: {
+                    Image(systemName: "xmark.circle")
+                        .imageScale(.large)
+                        .foregroundStyle(.black)
                 }
-            } label: {
-                Image(systemName: "xmark.circle")
-                    .imageScale(.large)
-                    .foregroundStyle(.black)
+                
+                Spacer()
+                
+                if !destination.isEmpty{
+                    Button("Clear"){
+                        destination = ""
+                    }
+                    .foregroundColor(.black)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                }
             }
+            .padding()
             
             //Where to
             VStack(alignment: .leading){
@@ -73,21 +91,27 @@ struct DestinationSearchView: View {
             
             // date selection views
             
-            VStack{
+            VStack(alignment: .leading){
                 if selectedOption == .dates{
-                    HStack {
-                        
-                        Text("Show expanded view")
-                        
-                        Spacer()
-                    }
+                   
+                        Text("When's your trip?")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        VStack{
+                            DatePicker("From", selection: $startDate, displayedComponents: .date)
+                            Divider()
+                            DatePicker("To", selection: $endDate, displayedComponents: .date)
+                        }
+                        .foregroundStyle(.gray)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
                 }
                 else{
                     CollapsedPickerView(title: "When", description: "Add dates")
                 }
             }
             .padding()
-            .frame(height: selectedOption == .dates ? 120 : 64)
+            .frame(height: selectedOption == .dates ? 180 : 64)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding()
@@ -97,15 +121,22 @@ struct DestinationSearchView: View {
             }
             
             // num guest views
-            VStack{
+            VStack(alignment: .leading){
                 if selectedOption == .guests{
-                    HStack {
-                        
-                        Text("Show expanded view")
-                        
-                        Spacer()
+                    Text("Who's coming?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Stepper {
+                        Text("\(numGuests) Adults")
+                    } onIncrement: {
+                        numGuests  = numGuests + 1
+                    } onDecrement: {
+                        guard numGuests > 0 else {return }
+                        numGuests = numGuests - 1
                     }
                 }
+                
                 else{
                     CollapsedPickerView(title: "Who", description: "Add guests")
                 }
@@ -119,6 +150,8 @@ struct DestinationSearchView: View {
             .onTapGesture {
                 withAnimation(.easeIn){ selectedOption = .guests }
             }
+            
+            Spacer()
         }
     }
 }
