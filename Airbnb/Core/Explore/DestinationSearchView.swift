@@ -141,6 +141,7 @@ struct DestinationSearchView: View {
                     CollapsedPickerView(title: "Who", description: "Add guests")
                 }
             }
+            //.modifier(CollapsibleDestinationViewModifier())
             .padding()
             .frame(height: selectedOption == .guests ? 120 : 64)
             .background(.white)
@@ -162,6 +163,20 @@ struct DestinationSearchView_Previews: PreviewProvider {
     }
 }
 
+//struct CollapsibleDestinationViewModifier: ViewBuilder
+//{
+//    func body(content: Content) -> some View {
+//        content
+//            .padding()
+//            .background(.white)
+//            .clipShape(RoundedRectangle(cornerRadius: 12))
+//            .padding()
+//            .shadow(radius: 10)
+//
+//    }
+//}
+
+
 struct CollapsedPickerView: View {
     
     var title: String
@@ -180,10 +195,5 @@ struct CollapsedPickerView: View {
             .fontWeight(.semibold)
             .font(.subheadline)
         }
-//        .padding()
-//        .background(.white)
-//        .clipShape(RoundedRectangle(cornerRadius: 12))
-//        .padding()
-//        .shadow(radius: 10)
     }
 }
