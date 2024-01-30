@@ -22,6 +22,7 @@
 		82DC74132B5D39DC007A5082 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC74122B5D39DC007A5082 /* ListingDetailView.swift */; };
 		82DC74162B5D3A9A007A5082 /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC74152B5D3A9A007A5082 /* ListingImageCarouselView.swift */; };
 		82E7F4272B679011003D24FD /* ProfileOptionRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7F4262B679011003D24FD /* ProfileOptionRawView.swift */; };
+		82E7F42A2B68D98B003D24FD /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7F4292B68D98B003D24FD /* WishlistsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		82DC74122B5D39DC007A5082 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		82DC74152B5D3A9A007A5082 /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
 		82E7F4262B679011003D24FD /* ProfileOptionRawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRawView.swift; sourceTree = "<group>"; };
+		82E7F4292B68D98B003D24FD /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		82DC74022B5C35A6007A5082 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				82E7F4282B68D97A003D24FD /* Wishlists */,
 				82DC74142B5D3A66007A5082 /* Components */,
 				82DC74052B5C3634007A5082 /* Explore */,
 				82DC740B2B5C3682007A5082 /* Listings */,
@@ -253,6 +256,14 @@
 				82DC74152B5D3A9A007A5082 /* ListingImageCarouselView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		82E7F4282B68D97A003D24FD /* Wishlists */ = {
+			isa = PBXGroup;
+			children = (
+				82E7F4292B68D98B003D24FD /* WishlistsView.swift */,
+			);
+			path = Wishlists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				82DC73D92B5C3541007A5082 /* ContentView.swift in Sources */,
 				82DC740F2B5C3858007A5082 /* ListingItemView.swift in Sources */,
 				82DC740D2B5C36E1007A5082 /* ExploreView.swift in Sources */,
+				82E7F42A2B68D98B003D24FD /* WishlistsView.swift in Sources */,
 				82E7F4272B679011003D24FD /* ProfileOptionRawView.swift in Sources */,
 				82DC74112B5C4378007A5082 /* SearchAndFilterBar.swift in Sources */,
 				82DC74132B5D39DC007A5082 /* ListingDetailView.swift in Sources */,
