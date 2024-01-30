@@ -9,13 +9,7 @@ import SwiftUI
 import MapKit
 
 struct ListingDetailView: View {
-    
-    var images = [
-        "listing1",
-        "listing2",
-        "listing3",
-        "listing4",
-    ]
+  
     @Environment(\.dismiss) var dismiss
     
     @State private var region = MKCoordinateRegion(
@@ -173,6 +167,7 @@ struct ListingDetailView: View {
             }.padding()
             
         }
+        .toolbar(.hidden, for: .tabBar)
         .ignoresSafeArea()
         .padding(.bottom, 64)
         .overlay(alignment: .bottom) {

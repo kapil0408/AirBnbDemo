@@ -16,7 +16,6 @@ struct WishlistsView: View {
                 VStack(alignment: .leading, spacing: 4){
                     Text("Log in to view your wishlists")
                         .font(.headline)
-                    
                     Text("You can create, view or edit wishlists once you've logged in")
                         .font(.footnote)
                 }
