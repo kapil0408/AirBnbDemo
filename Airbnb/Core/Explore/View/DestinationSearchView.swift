@@ -17,12 +17,14 @@ enum DestinationSearchOptions{
 struct DestinationSearchView: View {
     
     @Binding var show : Bool
+    @ObservedObject var viewModel: ExploreViewModel
+
     @State private var destination = ""
-    
     @State private var selectedOption: DestinationSearchOptions = .location
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var numGuests = 0
+    
     
     var body: some View {
         VStack{
@@ -63,6 +65,9 @@ struct DestinationSearchView: View {
                             .imageScale(.small)
                         TextField("Search destination", text: $destination)
                             .font(.subheadline)
+                            .onSubmit {
+                                print("Update listings")
+                            }
                     }
                     .frame(height: 44)
                     .padding(.horizontal)
