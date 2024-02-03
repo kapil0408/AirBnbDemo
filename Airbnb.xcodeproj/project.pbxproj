@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82BFB2802B6E24BD009C226D /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BFB27F2B6E24BD009C226D /* Regions.swift */; };
 		82CA50A22B655D9D000B9DD8 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA50A12B655D9D000B9DD8 /* DestinationSearchView.swift */; };
 		82CA50A42B6656B4000B9DD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA50A32B6656B3000B9DD8 /* ProfileView.swift */; };
 		82DC73D72B5C3541007A5082 /* AirbnbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC73D62B5C3541007A5082 /* AirbnbApp.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82BFB27F2B6E24BD009C226D /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		82CA50A12B655D9D000B9DD8 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 		82CA50A32B6656B3000B9DD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		82DC73D32B5C3541007A5082 /* Airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				82E7F4312B6916A2003D24FD /* DeveloperPreview.swift */,
+				82BFB27F2B6E24BD009C226D /* Regions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				82DC740F2B5C3858007A5082 /* ListingItemView.swift in Sources */,
 				82DC740D2B5C36E1007A5082 /* ExploreView.swift in Sources */,
 				82E7F4372B6A1D88003D24FD /* ExploreViewModel.swift in Sources */,
+				82BFB2802B6E24BD009C226D /* Regions.swift in Sources */,
 				82E7F42A2B68D98B003D24FD /* WishlistsView.swift in Sources */,
 				82E7F4302B68E13D003D24FD /* Listing.swift in Sources */,
 				82E7F4272B679011003D24FD /* ProfileOptionRawView.swift in Sources */,

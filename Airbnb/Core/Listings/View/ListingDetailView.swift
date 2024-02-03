@@ -12,6 +12,17 @@ struct ListingDetailView: View {
   
     @Environment(\.dismiss) var dismiss
     let listing: Listing
+   // @State private var cameraPosition: MKMapCameraPosition
+    
+    init(listing: Listing)
+    {
+        self.listing = listing
+        
+        //let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 24.897533, longitude: 74.987634), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        
+       // self._cameraPosition = State(initialValue: .region(region))
+    }
+    
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: 25.7617,
