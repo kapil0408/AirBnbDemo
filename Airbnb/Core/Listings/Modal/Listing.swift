@@ -49,7 +49,7 @@ enum ListingFeatures: Int, Codable, Identifiable, Hashable {
         case .selfCheckIn:
             return "door.left.hand.open"
         case .superHost:
-            return "modal"
+            return "door.left.hand.open"
         }
     }
     
