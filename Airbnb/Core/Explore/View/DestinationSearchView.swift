@@ -19,7 +19,6 @@ struct DestinationSearchView: View {
     @Binding var show : Bool
     @ObservedObject var viewModel: ExploreViewModel
 
-    @State private var destination = ""
     @State private var selectedOption: DestinationSearchOptions = .location
     @State private var startDate = Date()
     @State private var endDate = Date()
@@ -32,6 +31,7 @@ struct DestinationSearchView: View {
                 
                 Button {
                     withAnimation(.easeIn){
+                        viewModel.updateListingForLocation()
                         show.toggle()
                     }
                 } label: {
@@ -42,9 +42,10 @@ struct DestinationSearchView: View {
                 
                 Spacer()
                 
-                if !destination.isEmpty{
+                if !viewModel.searchLocation.isEmpty{
                     Button("Clear"){
-                        destination = ""
+                        viewModel.searchLocation = ""
+                        viewModel.updateListingForLocation()
                     }
                     .foregroundColor(.black)
                     .font(.subheadline)
@@ -63,10 +64,11 @@ struct DestinationSearchView: View {
                     HStack{
                         Image(systemName: "magnifyingglass")
                             .imageScale(.small)
-                        TextField("Search destination", text: $destination)
+                        TextField("Search destination", text: $viewModel.searchLocation)
                             .font(.subheadline)
                             .onSubmit {
-                                print("Update listings")
+                                viewModel.updateListingForLocation()
+                                show.toggle()
                             }
                     }
                     .frame(height: 44)
@@ -164,7 +166,7 @@ struct DestinationSearchView: View {
 
 struct DestinationSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationSearchView(show: .constant(false))
+        DestinationSearchView(show: .constant(false), viewModel: ExploreViewModel(service: ExploreService()))
     }
 }
 

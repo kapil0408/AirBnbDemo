@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct SearchAndFilterBar: View {
+    
+    @Binding var location: String
+    
     var body: some View {
         HStack{
             Image(systemName: "magnifyingglass")
             VStack(alignment: .leading, spacing: 2) {
-                Text("where to?")
+                Text(location.isEmpty ? "where to?" : location)
                     .font(.footnote)
                     .fontWeight(.semibold)
                 
-                Text("Anywhere - Any Weak - Add guests")
+                Text("\(location.isEmpty ? "Anywhere - " : "") Any Weak - Add guests")
                     .font(.caption2)
                     .foregroundStyle(.gray)
             }
@@ -41,6 +44,6 @@ struct SearchAndFilterBar: View {
 
 struct SearchAndFilterBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchAndFilterBar()
+        SearchAndFilterBar(location: .constant("Jaipur"))
     }
 }
